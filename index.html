@@ -14,11 +14,11 @@
       
       
       
-        <link rel="next" href="archive/2024/05/">
+        <link rel="next" href="archive/2025/03/">
       
       
       <link rel="icon" href="favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.d7758b05.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
@@ -421,6 +421,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -461,6 +465,54 @@
             归档
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2025/03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025 三月
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2024/06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 六月
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -783,6 +835,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#-transmail-station" class="md-nav__link">
+    <span class="md-ellipsis">
+      邮件管理服务 - TransMail-Station
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-mysql-dataflowsyncdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据管道工具 - mysql-dataflowsync（DFS）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trashsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      trash.sh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sentryglitchtip" class="md-nav__link">
     <span class="md-ellipsis">
       Sentry的平替！GlitchTip部署过程及使用感受
@@ -795,33 +874,6 @@
   <a href="#ddns" class="md-nav__link">
     <span class="md-ellipsis">
       本地部署的阿里云DDNS更新脚本
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#snc" class="md-nav__link">
-    <span class="md-ellipsis">
-      SNC服务运营调整通知
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      机器码更改软件-发布页
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aliyun-osscdn" class="md-nav__link">
-    <span class="md-ellipsis">
-      启用Aliyun-OSS对象存储作为CDN
     </span>
   </a>
   
@@ -841,6 +893,157 @@
       <header class="md-typeset">
         <h1 id="_1">文章<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://cdn.libravatar.org/gravatarproxy/62dce8a3e40f07465a17354b9cacf027?d=identicon&s=56" alt="Jinx">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-03-19 14:09:00+00:00">2025年3月19日星期三</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 2 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="-transmail-station"><a class="toclink" href="archives/Managed-Mail-Services-TransMail-Station.html/">邮件管理服务 - TransMail-Station</a></h2>
+<p><a href="https://github.com/qqAys/TransMail-Station">qqAys/TransMail-Station - GitHub</a> | <a href="https://github.com/qqAys/TransMail-Station/blob/main/README.md">English</a></p>
+<p><img alt="GitHub License" src="https://img.shields.io/github/license/qqAys/TransMail-Station" />  <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/qqAys/TransMail-Station/publish.yml" />  <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/qqays/transmail-station" /></p>
+<h3 id="_1"><a class="toclink" href="archives/Managed-Mail-Services-TransMail-Station.html/#_1">简介</a></h3>
+<p>TransMail Station 是一个基于 HTTP 接口的邮件管理服务，旨在帮助业务代码通过 HTTP 请求发送与管理发送邮件，从而实现邮件发送功能与业务逻辑的解耦。</p>
+<ul>
+<li>特性：</li>
+<li>多联系人邮件发送（负载均衡）</li>
+<li>指定发送服务</li>
+<li>定时发送</li>
+<li>RESTful API</li>
+<li>docker compose 部署</li>
+<li>适用场景：</li>
+<li>作为邮件发送中心的微服务</li>
+<li>适用于需要将邮件发送功能从主业务逻辑中分离的项目。</li>
+<li>提供简单易用的接口，降低业务开发复杂度，提升业务开发速度。</li>
+</ul>
+<h3 id="_2"><a class="toclink" href="archives/Managed-Mail-Services-TransMail-Station.html/#_2">通信流程</a></h3>
+<p><a href="https://mermaid.live/edit#pako:eNqtUjtv2zAQ_ivEzYpjPRy5GgIk6eKhQAF5KrSw5EUiTJEOeWzrGv7vJUXDQNN2KxcSvO91uDuDsBKhA49vAY3Aj4qPjs-DYfEcuSMl1JEbYi9aYby4Z8_BK4Pes_7kCef7XPmTse8Tmhw3fuZK33nipKwZTIZm2t3j477v2NPnHXMpgidGlnk0kmFiZey-v-JeJhSH-3CUnJAJa4gLYlr5qz3XxHbzjFKlelLJ_79p7Mw3e8Asv2CUGdlsZdD4Dp0jRleu9VcuDuy7oulGceiDvhqj9sh6MWFSkf9yfpJy6e6GI-4PLHYd8C_ovVPjiO4_B03BoIAZXZSVcfLnVBiAJpxxgC4-Jb7yRIDBXCKUB7L9yQjoyAUswNkwTtC98thzAXkW17W5_cYJkHWf8m4tK1ZAXArozvADuqpqVtt11dZ1WT_UD-uygBN0m2b1oWzqtm6rZlvV1fZSwE9ro-h6tW3bddU0ZVVuNuWmbBa1L0sxhbr8ArCL5F4"><img alt="" src="https://mermaid.ink/img/pako:eNqtUjtv2zAQ_ivEzYpjPRy5GgIk6eKhQAF5KrSw5EUiTJEOeWzrGv7vJUXDQNN2KxcSvO91uDuDsBKhA49vAY3Aj4qPjs-DYfEcuSMl1JEbYi9aYby4Z8_BK4Pes_7kCef7XPmTse8Tmhw3fuZK33nipKwZTIZm2t3j477v2NPnHXMpgidGlnk0kmFiZey-v-JeJhSH-3CUnJAJa4gLYlr5qz3XxHbzjFKlelLJ_79p7Mw3e8Asv2CUGdlsZdD4Dp0jRleu9VcuDuy7oulGceiDvhqj9sh6MWFSkf9yfpJy6e6GI-4PLHYd8C_ovVPjiO4_B03BoIAZXZSVcfLnVBiAJpxxgC4-Jb7yRIDBXCKUB7L9yQjoyAUswNkwTtC98thzAXkW17W5_cYJkHWf8m4tK1ZAXArozvADuqpqVtt11dZ1WT_UD-uygBN0m2b1oWzqtm6rZlvV1fZSwE9ro-h6tW3bddU0ZVVuNuWmbBa1L0sxhbr8ArCL5F4?type=png" /></a></p>
+
+    
+      <nav class="md-post__action">
+        <a href="archives/Managed-Mail-Services-TransMail-Station.html/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://cdn.libravatar.org/gravatarproxy/62dce8a3e40f07465a17354b9cacf027?d=identicon&s=56" alt="Jinx">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-03-19 13:23:00+00:00">2025年3月19日星期三</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 2 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="-mysql-dataflowsyncdfs"><a class="toclink" href="archives/Data-Pipeline-Tools-mysql-dataflowsync%28DFS%29.html/">数据管道工具 - mysql-dataflowsync（DFS）</a></h2>
+<p><a href="https://github.com/qqAys/mysql-dataflowsync">qqAys/mysql-dataflowsync - GitHub</a> | <a href="https://github.com/qqAys/mysql-dataflowsync/blob/main/README.md">English</a></p>
+<p><img alt="GitHub License" src="https://img.shields.io/github/license/qqAys/mysql-dataflowsync" /></p>
+<h2 id="dfs"><a class="toclink" href="archives/Data-Pipeline-Tools-mysql-dataflowsync%28DFS%29.html/#dfs">DFS 介绍</a></h2>
+<p>DFS是一个数据同步框架，通过流式读取mysql binlog实现数据捕获，目标数据库可以是mysql，也可以是其他数据库。这个框架由一个毫秒级的增量数据捕获模块（CDC）、基于sqlite数据库的持久化队列 <a href="https://github.com/peter-wangxu/persist-queue">persist-queue</a>、自动关系处理模块（rel_mgr）以及符合业务逻辑的、复杂的数据转换模块（DPU）构成，使用 <a href="https://github.com/qqAys/mysql-dataflowsync/blob/main/dfs-entrypoint.py">dfs-entrypoint.py</a> 启动，可以自由组合调用。在一个日均7.5万事件负载的集群数据库中，增量数据同步能够在秒级延迟内完成（平均延迟1秒内），同时保持了数据的完整性和一致性。</p>
+<h3 id="dfs_1"><a class="toclink" href="archives/Data-Pipeline-Tools-mysql-dataflowsync%28DFS%29.html/#dfs_1">DFS 工作流</a></h3>
+<p><a href="https://mermaid.live/edit#pako:eNqVVdtu4jAQ_RXLT7sSoJCFUqLtSuVSVAlaaEBdbVMhkwzBKokjx-mN8u87TgopISu0eYgc-8zM8TkeZ0Nd4QG16HItXtwVk4o4IcEnTha-ZNGKOLS7Fonn0GxeP3av8_DNobZIpAukxxRbsBgc-v0xx3SGDw8OXTJryapLvgbS4eFa-MRWEljg0MfHg3ykWqtiTDYHoZcNjqhk-dxkATHpXdnEBvkM8iu3UjDp9rpkFnL1FZmxtDebPRKVIIuU5jxOac7x5en82-1h3NWoXohzPXe-5LD25gGLorKYzpBcXPzSJY84pAsfDu0_Q4gcP3T-HLSXI5fkcDTRbmRcvE8zyBhkzGNFJgkkBWuGmX2FAC1nuZX5CGntqI5nU010UgYr96A3nsVF_e9GBRklrJniIoxXPEIlQ-aXy28W4rwoOSG_PSiExIopCFDwuQ8hSKZEeaUjc-xBcRMl_pkn_Zvsogb9VMq70X9oiWaNBB5oIY8knY72jffCQ0-8VAP2ygP-DuS-3yGza2y-w5DL8XVBG8w_XzJUKOJzKRJVJujJDQ6ztk73qAlf31zd6o1iuf38PSxi4T5BqhpS_3qB2HuUbt87cIE_AxkKX2MxeY5FB35-iomnDKH5ISJd7GH9QS5verob5NtRuDZ5TxTjx1K4EMc89Eur2YMcPRqS_iu4SVqhDHzqRju6XKel3Tll0gf1jwZFQrvdaz6_-93ZtK-ZTHdMsD6hFRqADBj38Lrf6HmHqhV2gEMtHHpMPmkeW8SxRAn7LXSppWQCFYpHwF9RJLSO8SuJkBb0OMM9BDsIePowjrKfSfpPqdCIhdTa0FdqmW2z1qqfN8yztnluGM16hb5Rq1FrGGfNltE2jbPzRqPZ2FbouxCY06i1W_X2D1Ov1VtGq95Ms_1JF3XB7V_t9uVj"><img alt="" src="https://mermaid.ink/img/pako:eNqVVdtu4jAQ_RXLT7sSoJCFUqLtSuVSVAlaaEBdbVMhkwzBKokjx-mN8u87TgopISu0eYgc-8zM8TkeZ0Nd4QG16HItXtwVk4o4IcEnTha-ZNGKOLS7Fonn0GxeP3av8_DNobZIpAukxxRbsBgc-v0xx3SGDw8OXTJryapLvgbS4eFa-MRWEljg0MfHg3ykWqtiTDYHoZcNjqhk-dxkATHpXdnEBvkM8iu3UjDp9rpkFnL1FZmxtDebPRKVIIuU5jxOac7x5en82-1h3NWoXohzPXe-5LD25gGLorKYzpBcXPzSJY84pAsfDu0_Q4gcP3T-HLSXI5fkcDTRbmRcvE8zyBhkzGNFJgkkBWuGmX2FAC1nuZX5CGntqI5nU010UgYr96A3nsVF_e9GBRklrJniIoxXPEIlQ-aXy28W4rwoOSG_PSiExIopCFDwuQ8hSKZEeaUjc-xBcRMl_pkn_Zvsogb9VMq70X9oiWaNBB5oIY8knY72jffCQ0-8VAP2ygP-DuS-3yGza2y-w5DL8XVBG8w_XzJUKOJzKRJVJujJDQ6ztk73qAlf31zd6o1iuf38PSxi4T5BqhpS_3qB2HuUbt87cIE_AxkKX2MxeY5FB35-iomnDKH5ISJd7GH9QS5verob5NtRuDZ5TxTjx1K4EMc89Eur2YMcPRqS_iu4SVqhDHzqRju6XKel3Tll0gf1jwZFQrvdaz6_-93ZtK-ZTHdMsD6hFRqADBj38Lrf6HmHqhV2gEMtHHpMPmkeW8SxRAn7LXSppWQCFYpHwF9RJLSO8SuJkBb0OMM9BDsIePowjrKfSfpPqdCIhdTa0FdqmW2z1qqfN8yztnluGM16hb5Rq1FrGGfNltE2jbPzRqPZ2FbouxCY06i1W_X2D1Ov1VtGq95Ms_1JF3XB7V_t9uVj?type=png" /></a></p>
+
+    
+      <nav class="md-post__action">
+        <a href="archives/Data-Pipeline-Tools-mysql-dataflowsync%28DFS%29.html/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://cdn.libravatar.org/gravatarproxy/62dce8a3e40f07465a17354b9cacf027?d=identicon&s=56" alt="Jinx">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-06-18 11:43:00+00:00">2024年6月18日星期二</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 2 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="trashsh"><a class="toclink" href="archives/trash.sh.html/">trash.sh</a></h2>
+<p><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/qqAys/trash.sh" /></p>
+<p><a href="https://github.com/qqAys/trash.sh">qqAys/trash.sh - GitHub</a> | <a href="https://github.com/qqAys/trash.sh/blob/main/README.zh-CN.md">简体中文</a></p>
+<p><code>trash.sh</code> is a script that serves as a safe alternative to <code>rm</code>, allowing for secure handling of files and directories by moving them to a trash bin instead of permanently deleting them.</p>
+<p>If you use <code>trash.sh</code> as described below, <code>rm</code> essentially becomes <code>mv</code>. <code>trash.sh</code> handles moving items to the trash for you, so please be aware of this change!</p>
+
+    
+      <nav class="md-post__action">
+        <a href="archives/trash.sh.html/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -933,132 +1136,6 @@
   </div>
 </article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://cdn.libravatar.org/gravatarproxy/62dce8a3e40f07465a17354b9cacf027?d=identicon&s=56" alt="Jinx">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-11-10 13:34:00+00:00">2022年11月10日星期四</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="snc"><a class="toclink" href="archives/snc-service-operation-adjustment-notice.html/">SNC服务运营调整通知</a></h2>
-<p>SNC所有服务将于<code>2022年11月11日18点00分</code>停止。</p>
-<p><strong>届时将会</strong>：</p>
-<ul>
-<li>关闭发布和卡密购买页面</li>
-<li>关闭用户登录、代理登录、生成卡密接口</li>
-<li>停止站点和CDN下载(Github不影响)</li>
-<li>打包数据库和相关站点并存档</li>
-</ul>
-<p>重新开放时间：<code>暂定</code></p>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://cdn.libravatar.org/gravatarproxy/62dce8a3e40f07465a17354b9cacf027?d=identicon&s=56" alt="Jinx">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-09-06 18:00:00+00:00">2022年9月6日星期二</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="-"><a class="toclink" href="archives/snc-machine-code-change-software.html/">机器码更改软件-发布页</a></h2>
-<p><img alt="release" src="https://badgen.net/github/release/qqAys/SNC" />
-<img alt="last commit" src="https://badgen.net/github/last-commit/qqAys/SNC/Proxy" /></p>
-<h5 id="cdngithub"><a class="toclink" href="archives/snc-machine-code-change-software.html/#cdngithub">下载地址：<a href="https://qqays-mkdocs-blog.oss-cn-shenzhen.aliyuncs.com/SNC/SNC_2.0.0.3.zip">站内CDN</a>、<a href="https://yun.qqays.xyz:8081/d/ac775448de3b4affb9ff/">站内资料库</a>、<a href="https://github.com/qqAys/SNC/releases/tag/Proxy">Github</a></a></h5>
-<h5 id="_1"><a class="toclink" href="archives/snc-machine-code-change-software.html/#_1">卡密：<a href="https://card.qqays.xyz">点我购买</a></a></h5>
-
-    
-      <nav class="md-post__action">
-        <a href="archives/snc-machine-code-change-software.html/">
-          继续阅读
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://cdn.libravatar.org/gravatarproxy/62dce8a3e40f07465a17354b9cacf027?d=identicon&s=56" alt="Jinx">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-07-27 17:22:00+00:00">2022年7月27日星期三</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="aliyun-osscdn"><a class="toclink" href="archives/site-aliyun-oss-object-storage.html/">启用Aliyun-OSS对象存储作为CDN</a></h2>
-<p>在此之后，站点内所有文章内的文件、图片、音视频链接域名更变为<code>https://qqays-mkdocs-blog.oss-cn-shenzhen.aliyuncs.com</code></p>
-<p>由阿里云边缘服务器提供内容分发，详见<a href="https://www.aliyun.com/product/oss/">Aliyun-OSS</a>。</p>
-<p>站点架构：</p>
-<p><img alt="架构图" src="https://qqays-mkdocs-blog.oss-cn-shenzhen.aliyuncs.com/uploads/2022/07/27/p141987.png" /></p>
-    
-  </div>
-</article>
-      
       
         
           
@@ -1066,7 +1143,7 @@
 
 
 <nav class="md-pagination">
-  <span class="md-pagination__current">1</span> <a class="md-pagination__link" href="page/2/">2</a> <a class="md-pagination__link" href="page/3/">3</a>
+  <span class="md-pagination__current">1</span> <a class="md-pagination__link" href="page/2/">2</a> <a class="md-pagination__link" href="page/3/">3</a> <a class="md-pagination__link" href="page/4/">4</a>
 </nav>
         
       
@@ -1093,13 +1170,13 @@
         
         
           
-          <a href="archive/2024/05/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2024 五月">
+          <a href="archive/2025/03/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2025 三月">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                2024 五月
+                2025 三月
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1156,7 +1233,7 @@
     <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.follow", "navigation.top", "announce.dismiss", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="assets/javascripts/bundle.f13b1293.min.js"></script>
+      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>

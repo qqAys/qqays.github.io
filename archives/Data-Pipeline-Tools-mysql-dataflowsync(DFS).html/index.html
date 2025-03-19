@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://qqays.xyz/archive/2022/09/">
+        <link rel="canonical" href="https://qqays.xyz/archives/Data-Pipeline-Tools-mysql-dataflowsync%28DFS%29.html/">
       
       
-        <link rel="prev" href="../11/">
+        <link rel="prev" href="../trash.sh.html/">
       
       
-        <link rel="next" href="../07/">
+        <link rel="next" href="../Managed-Mail-Services-TransMail-Station.html/">
       
       
-      <link rel="icon" href="../../../favicon.ico">
+      <link rel="icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
-        <title>2022 九月 - qqAys</title>
+        <title>数据管道工具 - mysql-dataflowsync（DFS） - qqAys</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,11 +50,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Medium.min.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2022" class="md-skip">
+        <a href="#-mysql-dataflowsyncdfs" class="md-skip">
           跳转至
         </a>
       
@@ -111,9 +111,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="qqAys" class="md-header__button md-logo" aria-label="qqAys" data-md-component="logo">
+    <a href="../.." title="qqAys" class="md-header__button md-logo" aria-label="qqAys" data-md-component="logo">
       
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2022 九月
+              数据管道工具 - mysql-dataflowsync（DFS）
             
           </span>
         </div>
@@ -234,7 +234,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
     
@@ -252,7 +252,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../links_and_tools.html/" class="md-tabs__link">
+      <a href="../../links_and_tools.html/" class="md-tabs__link">
         
   
     
@@ -269,7 +269,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../friends.html/" class="md-tabs__link">
+      <a href="../../friends.html/" class="md-tabs__link">
         
   
     
@@ -286,7 +286,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../about.html/" class="md-tabs__link">
+      <a href="../../about.html/" class="md-tabs__link">
         
   
     
@@ -309,7 +309,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -320,9 +322,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="qqAys" class="md-nav__button md-logo" aria-label="qqAys" data-md-component="logo">
+    <a href="../.." title="qqAys" class="md-nav__button md-logo" aria-label="qqAys" data-md-component="logo">
       
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     qqAys
@@ -369,7 +371,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../.." class="md-nav__link ">
+            <a href="../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -400,8 +402,6 @@
                 
   
   
-    
-  
   
   
     
@@ -442,11 +442,13 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="">
@@ -461,7 +463,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             归档
@@ -477,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2025/03/" class="md-nav__link">
+      <a href="../../archive/2025/03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2024/06/" class="md-nav__link">
+      <a href="../../archive/2024/06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -525,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2024/05/" class="md-nav__link">
+      <a href="../../archive/2024/05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -549,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2023/02/" class="md-nav__link">
+      <a href="../../archive/2023/02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../11/" class="md-nav__link">
+      <a href="../../archive/2022/11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,35 +594,12 @@
                 
   
   
-    
-  
   
     
-      
-    
   
   
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    2022 九月
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../archive/2022/09/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,35 +609,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      机器码更改软件-发布页
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -673,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07/" class="md-nav__link">
+      <a href="../../archive/2022/07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -697,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06/" class="md-nav__link">
+      <a href="../../archive/2022/06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2021/12/" class="md-nav__link">
+      <a href="../../archive/2021/12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -745,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2021/11/" class="md-nav__link">
+      <a href="../../archive/2021/11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -769,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2021/05/" class="md-nav__link">
+      <a href="../../archive/2021/05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -806,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../links_and_tools.html/" class="md-nav__link">
+      <a href="../../links_and_tools.html/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -827,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../friends.html/" class="md-nav__link">
+      <a href="../../friends.html/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -848,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about.html/" class="md-nav__link">
+      <a href="../../about.html/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -870,6 +820,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -882,23 +834,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      机器码更改软件-发布页
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -906,69 +841,232 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2022">2022 九月<a class="headerlink" href="#2022" title="Permanent link">&para;</a></h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://cdn.libravatar.org/gravatarproxy/62dce8a3e40f07465a17354b9cacf027?d=identicon&s=56" alt="Jinx">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-09-06 18:00:00+00:00">2022年9月6日星期二</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    回到主页
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://cdn.libravatar.org/gravatarproxy/62dce8a3e40f07465a17354b9cacf027?d=identicon&s=56" alt="Jinx">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="/about.html">Jinx</a>
+                        
+                      </strong>
+                      <br>
+                      学途漫漫, 朋辈同行
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    元数据
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-03-19 13:23:00+00:00" class="md-ellipsis">2025年3月19日星期三</time>
+                      </div>
+                    </li>
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69zm4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67zM5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2zm11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85"/></svg>
+                          <time datetime="2025-03-19 13:23:00+00:00" class="md-ellipsis">2025年3月19日星期三</time>
+                        </div>
+                      </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              需要 2 分钟阅读时间
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
           
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="-"><a class="toclink" href="../../../archives/snc-machine-code-change-software.html/">机器码更改软件-发布页</a></h2>
-<p><img alt="release" src="https://badgen.net/github/release/qqAys/SNC" />
-<img alt="last commit" src="https://badgen.net/github/last-commit/qqAys/SNC/Proxy" /></p>
-<h5 id="cdngithub"><a class="toclink" href="../../../archives/snc-machine-code-change-software.html/#cdngithub">下载地址：<a href="https://qqays-mkdocs-blog.oss-cn-shenzhen.aliyuncs.com/SNC/SNC_2.0.0.3.zip">站内CDN</a>、<a href="https://yun.qqays.xyz:8081/d/ac775448de3b4affb9ff/">站内资料库</a>、<a href="https://github.com/qqAys/SNC/releases/tag/Proxy">Github</a></a></h5>
-<h5 id="_1"><a class="toclink" href="../../../archives/snc-machine-code-change-software.html/#_1">卡密：<a href="https://card.qqays.xyz">点我购买</a></a></h5>
-
-    
-      <nav class="md-post__action">
-        <a href="../../../archives/snc-machine-code-change-software.html/">
-          继续阅读
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
+    <article class="md-content__inner md-typeset">
       
         
-          
-
-
-
-<nav class="md-pagination">
   
-</nav>
-        
+
+
+
+
+<h1 id="-mysql-dataflowsyncdfs">数据管道工具 - mysql-dataflowsync（DFS）<a class="headerlink" href="#-mysql-dataflowsyncdfs" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/qqAys/mysql-dataflowsync">qqAys/mysql-dataflowsync - GitHub</a> | <a href="https://github.com/qqAys/mysql-dataflowsync/blob/main/README.md">English</a></p>
+<p><img alt="GitHub License" src="https://img.shields.io/github/license/qqAys/mysql-dataflowsync" /></p>
+<h1 id="dfs">DFS 介绍<a class="headerlink" href="#dfs" title="Permanent link">&para;</a></h1>
+<p>DFS是一个数据同步框架，通过流式读取mysql binlog实现数据捕获，目标数据库可以是mysql，也可以是其他数据库。这个框架由一个毫秒级的增量数据捕获模块（CDC）、基于sqlite数据库的持久化队列 <a href="https://github.com/peter-wangxu/persist-queue">persist-queue</a>、自动关系处理模块（rel_mgr）以及符合业务逻辑的、复杂的数据转换模块（DPU）构成，使用 <a href="https://github.com/qqAys/mysql-dataflowsync/blob/main/dfs-entrypoint.py">dfs-entrypoint.py</a> 启动，可以自由组合调用。在一个日均7.5万事件负载的集群数据库中，增量数据同步能够在秒级延迟内完成（平均延迟1秒内），同时保持了数据的完整性和一致性。</p>
+<h2 id="dfs_1">DFS 工作流<a class="headerlink" href="#dfs_1" title="Permanent link">&para;</a></h2>
+<p><a href="https://mermaid.live/edit#pako:eNqVVdtu4jAQ_RXLT7sSoJCFUqLtSuVSVAlaaEBdbVMhkwzBKokjx-mN8u87TgopISu0eYgc-8zM8TkeZ0Nd4QG16HItXtwVk4o4IcEnTha-ZNGKOLS7Fonn0GxeP3av8_DNobZIpAukxxRbsBgc-v0xx3SGDw8OXTJryapLvgbS4eFa-MRWEljg0MfHg3ykWqtiTDYHoZcNjqhk-dxkATHpXdnEBvkM8iu3UjDp9rpkFnL1FZmxtDebPRKVIIuU5jxOac7x5en82-1h3NWoXohzPXe-5LD25gGLorKYzpBcXPzSJY84pAsfDu0_Q4gcP3T-HLSXI5fkcDTRbmRcvE8zyBhkzGNFJgkkBWuGmX2FAC1nuZX5CGntqI5nU010UgYr96A3nsVF_e9GBRklrJniIoxXPEIlQ-aXy28W4rwoOSG_PSiExIopCFDwuQ8hSKZEeaUjc-xBcRMl_pkn_Zvsogb9VMq70X9oiWaNBB5oIY8knY72jffCQ0-8VAP2ygP-DuS-3yGza2y-w5DL8XVBG8w_XzJUKOJzKRJVJujJDQ6ztk73qAlf31zd6o1iuf38PSxi4T5BqhpS_3qB2HuUbt87cIE_AxkKX2MxeY5FB35-iomnDKH5ISJd7GH9QS5verob5NtRuDZ5TxTjx1K4EMc89Eur2YMcPRqS_iu4SVqhDHzqRju6XKel3Tll0gf1jwZFQrvdaz6_-93ZtK-ZTHdMsD6hFRqADBj38Lrf6HmHqhV2gEMtHHpMPmkeW8SxRAn7LXSppWQCFYpHwF9RJLSO8SuJkBb0OMM9BDsIePowjrKfSfpPqdCIhdTa0FdqmW2z1qqfN8yztnluGM16hb5Rq1FrGGfNltE2jbPzRqPZ2FbouxCY06i1W_X2D1Ov1VtGq95Ms_1JF3XB7V_t9uVj"><img alt="" src="https://mermaid.ink/img/pako:eNqVVdtu4jAQ_RXLT7sSoJCFUqLtSuVSVAlaaEBdbVMhkwzBKokjx-mN8u87TgopISu0eYgc-8zM8TkeZ0Nd4QG16HItXtwVk4o4IcEnTha-ZNGKOLS7Fonn0GxeP3av8_DNobZIpAukxxRbsBgc-v0xx3SGDw8OXTJryapLvgbS4eFa-MRWEljg0MfHg3ykWqtiTDYHoZcNjqhk-dxkATHpXdnEBvkM8iu3UjDp9rpkFnL1FZmxtDebPRKVIIuU5jxOac7x5en82-1h3NWoXohzPXe-5LD25gGLorKYzpBcXPzSJY84pAsfDu0_Q4gcP3T-HLSXI5fkcDTRbmRcvE8zyBhkzGNFJgkkBWuGmX2FAC1nuZX5CGntqI5nU010UgYr96A3nsVF_e9GBRklrJniIoxXPEIlQ-aXy28W4rwoOSG_PSiExIopCFDwuQ8hSKZEeaUjc-xBcRMl_pkn_Zvsogb9VMq70X9oiWaNBB5oIY8knY72jffCQ0-8VAP2ygP-DuS-3yGza2y-w5DL8XVBG8w_XzJUKOJzKRJVJujJDQ6ztk73qAlf31zd6o1iuf38PSxi4T5BqhpS_3qB2HuUbt87cIE_AxkKX2MxeY5FB35-iomnDKH5ISJd7GH9QS5verob5NtRuDZ5TxTjx1K4EMc89Eur2YMcPRqS_iu4SVqhDHzqRju6XKel3Tll0gf1jwZFQrvdaz6_-93ZtK-ZTHdMsD6hFRqADBj38Lrf6HmHqhV2gEMtHHpMPmkeW8SxRAn7LXSppWQCFYpHwF9RJLSO8SuJkBb0OMM9BDsIePowjrKfSfpPqdCIhdTa0FdqmW2z1qqfN8yztnluGM16hb5Rq1FrGGfNltE2jbPzRqPZ2FbouxCY06i1W_X2D1Ov1VtGq95Ms_1JF3XB7V_t9uVj?type=png" /></a></p>
+<!-- more -->
+
+<h2 id="_1">开发背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>公司有个项目要实施数据迁移，我先来介绍一下当时的业务场景，我们有一个旧业务系统，这个系统是大范围使用的，产品设计了新一代业务系统，需要进行小范围生产试点，试点需要使用生产数据，并且产生的数据影响也是生产级别的。试点环境需直接使用生产数据，但旧系统数据高度耦合，无法通过类似"删档内测"模式实现数据隔离。</p>
+<p>我首先评估了阿里云DTS，其在数据同步场景中展现出卓越性能。然而，新旧系统间存在显著差异：第一就是表结构重构，业务模型升级导致表间关系与字段定义发生根本性变化；第二就是字段值语义演变，业务字段的编码规则、数据类型及业务含义均发生变化或迁移。</p>
+<p>这些差异使得直接的数据同步无法满足需求，传统ETL工具也因缺乏业务规则适配能力而受限，那不如就自己开发个ETL工具吧。</p>
+<h2 id="dfs_2">DFS 使用场景<a class="headerlink" href="#dfs_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>用于<strong>数据同步</strong> - 用于源数据库与目标数据库表结构一致情况下的数据同步。</p>
+</li>
+<li>
+<p>用于<strong>数据管道</strong> - 用于源数据库与目标数据库表结构不一致情况下的数据同步，经过DPU自定义表结构映射与数据加工，可实现数据管道功能。</p>
+</li>
+<li>
+<p>用于<strong>数据备份</strong> - 不设置目标数据库，使用内置的DFS日志数据库，实现增量数据事件备份功能。</p>
+</li>
+</ul>
+<h2 id="_2">已测试环境<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>源数据库: MySQL 5.7.x（打开binlog，且<code>binlog-format = ROW</code>）</li>
+<li>目标数据库: MySQL 8.0.x</li>
+<li>Python 版本: 3.12+</li>
+<li>Python 库: <a href="https://github.com/qqAys/mysql-dataflowsync/blob/main/requirements.txt">requirements.txt</a></li>
+</ul>
+<h2 id="_3">安装<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>按需修改 <code>config.example.yaml</code> 并重命名为 <code>config.yaml</code>
+    &gt; 如需指定binlog文件与binlog位置，请在 <code>config.yaml</code> 中设置 <code>binlog_file</code> 与 <code>binlog_pos</code>。</p>
+</li>
+<li>
+<p>构建并启动容器</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>mysql-dataflowsync:latest<span class="w"> </span>.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</span></code></pre></div></td></tr></table></div>
+</li>
+</ol>
+<h2 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Configuration: Using a 2022 M2 MacBook Pro (16GB), Python 3.12, source database is MySQL 5.7.x (PolarDB), target database is MySQL 8.0.x (PolarDB)</p>
+</blockquote>
+<h3 id="cdc-change-data-capture-unit"><img alt="CDC" src="https://github.com/qqAys/mysql-dataflowsync/raw/refs/heads/main/monitor/static/cdc/favicon.ico" title="CDC" /> CDC (Change Data Capture) Unit<a class="headerlink" href="#cdc-change-data-capture-unit" title="Permanent link">&para;</a></h3>
+<p>A change data capture unit implemented using the Python <code>mysql-replication</code> and <code>persist-queue</code> libraries.</p>
+<p>CDC processing speed: <code>Maximum</code> 59 records per second (<code>MAX 59rps</code>) on a single node, with an average of <code>17ms</code> per record.</p>
+<h3 id="dpu-data-processing-unit"><img alt="DPU" src="https://github.com/qqAys/mysql-dataflowsync/raw/refs/heads/main/monitor/static/dpu/favicon.ico" title="DPU" /> DPU (Data Processing Unit)<a class="headerlink" href="#dpu-data-processing-unit" title="Permanent link">&para;</a></h3>
+<p>Custom Data Processing Unit for unidirectional data synchronisation between two databases.</p>
+<p>DPU processing speed: in the case of a single node, the maximum processing <code>18</code> records per second (<code>MAX 18rps</code>), the average <code>55ms</code> processing a record.</p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>This project is licensed under the MIT License.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/julien-duponchelle/python-mysql-replication">python-mysql-replication</a> - Apache License, Version 2.0</li>
+<li><a href="https://github.com/peter-wangxu/persist-queue">persist-queue</a> - BSD-3-Clause license</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+  <h2 id="__comments">评论</h2>
+  <!-- Insert generated snippet here -->
+<script src="https://giscus.app/client.js"
+        data-repo="qqAys/qqays.github.io"
+        data-repo-id="R_kgDOMKAd3g"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOMKAd3s4Cgcik"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -987,10 +1085,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../11/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 2022 十一月">
+          <a href="../trash.sh.html/" class="md-footer__link md-footer__link--prev" aria-label="上一页: trash.sh">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1000,20 +1100,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                2022 十一月
+                trash.sh
               </div>
             </div>
           </a>
         
         
           
-          <a href="../07/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2022 七月">
+          <a href="../Managed-Mail-Services-TransMail-Station.html/" class="md-footer__link md-footer__link--next" aria-label="下一页: 邮件管理服务 - TransMail-Station">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                2022 七月
+                邮件管理服务 - TransMail-Station
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1067,10 +1167,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.follow", "navigation.top", "announce.dismiss", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.follow", "navigation.top", "announce.dismiss", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>

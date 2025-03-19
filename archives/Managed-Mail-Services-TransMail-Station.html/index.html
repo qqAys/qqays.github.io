@@ -10,13 +10,11 @@
       
       
       
-        <link rel="canonical" href="https://qqays.xyz/archives/shell-script-for-timed-memory-release-in-centos.html/">
+        <link rel="canonical" href="https://qqays.xyz/archives/Managed-Mail-Services-TransMail-Station.html/">
       
       
-        <link rel="prev" href="../installation-of-site-ssl-certificate.html/">
+        <link rel="prev" href="../Data-Pipeline-Tools-mysql-dataflowsync%28DFS%29.html/">
       
-      
-        <link rel="next" href="../typecho-displays-article-titles.html/">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -24,7 +22,7 @@
     
     
       
-        <title>CentOS中定时释放内存的Shell脚本 - qqAys</title>
+        <title>邮件管理服务 - TransMail-Station - qqAys</title>
       
     
     
@@ -80,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#centosshell" class="md-skip">
+        <a href="#-transmail-station" class="md-skip">
           跳转至
         </a>
       
@@ -130,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CentOS中定时释放内存的Shell脚本
+              邮件管理服务 - TransMail-Station
             
           </span>
         </div>
@@ -843,7 +841,7 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      一、脚本及原理
+      简介
     </span>
   </a>
   
@@ -852,7 +850,109 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      二、定时任务的参数及设置
+      通信流程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      快速开始
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="快速开始">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 创建文件夹
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 拉取配置与 docker-compose.yml
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 编辑配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 启动容器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 使用API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      本地构建
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="本地构建">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 克隆项目，修改配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-docker-composebuildyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 使用 docker-compose.build.yml 构建并启动容器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      许可
     </span>
   </a>
   
@@ -914,14 +1014,14 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2021-05-09 19:05:00+00:00" class="md-ellipsis">2021年5月9日星期日</time>
+                        <time datetime="2025-03-19 14:09:00+00:00" class="md-ellipsis">2025年3月19日星期三</time>
                       </div>
                     </li>
                     
                       <li class="md-nav__item">
                         <div class="md-nav__link">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69zm4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67zM5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2zm11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85"/></svg>
-                          <time datetime="2022-07-06 16:17:30+00:00" class="md-ellipsis">2022年7月6日星期三</time>
+                          <time datetime="2025-03-19 14:09:00+00:00" class="md-ellipsis">2025年3月19日星期三</time>
                         </div>
                       </li>
                     
@@ -933,7 +1033,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              需要 1 分钟阅读时间
+                              需要 2 分钟阅读时间
                             
                           </span>
                         </div>
@@ -957,50 +1057,113 @@
 
 
 
-<h1 id="centosshell">CentOS中定时释放内存的Shell脚本<a class="headerlink" href="#centosshell" title="Permanent link">&para;</a></h1>
-<p>在设置报警规则后每天几乎都会收到内存过高报警，想着就使用Shell脚本来释放内存。</p>
-<h2 id="_1">一、脚本及原理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>脚本：</p>
-<p>我在<code>/mnt</code>下创建了<code>free_memory.sh</code></p>
-<p>我的解释器在/usr/bin下，所以脚本如下：
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>#! /usr/bin/bash
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>sync
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>echo 3 &gt; /proc/sys/vm/drop_caches
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>echo &quot;done!&quot;
-</span></code></pre></div></td></tr></table></div></p>
+<h1 id="-transmail-station">邮件管理服务 - TransMail-Station<a class="headerlink" href="#-transmail-station" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/qqAys/TransMail-Station">qqAys/TransMail-Station - GitHub</a> | <a href="https://github.com/qqAys/TransMail-Station/blob/main/README.md">English</a></p>
+<p><img alt="GitHub License" src="https://img.shields.io/github/license/qqAys/TransMail-Station" />  <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/qqAys/TransMail-Station/publish.yml" />  <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/qqays/transmail-station" /></p>
+<h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>TransMail Station 是一个基于 HTTP 接口的邮件管理服务，旨在帮助业务代码通过 HTTP 请求发送与管理发送邮件，从而实现邮件发送功能与业务逻辑的解耦。</p>
+<ul>
+<li>特性：</li>
+<li>多联系人邮件发送（负载均衡）</li>
+<li>指定发送服务</li>
+<li>定时发送</li>
+<li>RESTful API</li>
+<li>docker compose 部署</li>
+<li>适用场景：</li>
+<li>作为邮件发送中心的微服务</li>
+<li>适用于需要将邮件发送功能从主业务逻辑中分离的项目。</li>
+<li>提供简单易用的接口，降低业务开发复杂度，提升业务开发速度。</li>
+</ul>
+<h2 id="_2">通信流程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><a href="https://mermaid.live/edit#pako:eNqtUjtv2zAQ_ivEzYpjPRy5GgIk6eKhQAF5KrSw5EUiTJEOeWzrGv7vJUXDQNN2KxcSvO91uDuDsBKhA49vAY3Aj4qPjs-DYfEcuSMl1JEbYi9aYby4Z8_BK4Pes_7kCef7XPmTse8Tmhw3fuZK33nipKwZTIZm2t3j477v2NPnHXMpgidGlnk0kmFiZey-v-JeJhSH-3CUnJAJa4gLYlr5qz3XxHbzjFKlelLJ_79p7Mw3e8Asv2CUGdlsZdD4Dp0jRleu9VcuDuy7oulGceiDvhqj9sh6MWFSkf9yfpJy6e6GI-4PLHYd8C_ovVPjiO4_B03BoIAZXZSVcfLnVBiAJpxxgC4-Jb7yRIDBXCKUB7L9yQjoyAUswNkwTtC98thzAXkW17W5_cYJkHWf8m4tK1ZAXArozvADuqpqVtt11dZ1WT_UD-uygBN0m2b1oWzqtm6rZlvV1fZSwE9ro-h6tW3bddU0ZVVuNuWmbBa1L0sxhbr8ArCL5F4"><img alt="" src="https://mermaid.ink/img/pako:eNqtUjtv2zAQ_ivEzYpjPRy5GgIk6eKhQAF5KrSw5EUiTJEOeWzrGv7vJUXDQNN2KxcSvO91uDuDsBKhA49vAY3Aj4qPjs-DYfEcuSMl1JEbYi9aYby4Z8_BK4Pes_7kCef7XPmTse8Tmhw3fuZK33nipKwZTIZm2t3j477v2NPnHXMpgidGlnk0kmFiZey-v-JeJhSH-3CUnJAJa4gLYlr5qz3XxHbzjFKlelLJ_79p7Mw3e8Asv2CUGdlsZdD4Dp0jRleu9VcuDuy7oulGceiDvhqj9sh6MWFSkf9yfpJy6e6GI-4PLHYd8C_ovVPjiO4_B03BoIAZXZSVcfLnVBiAJpxxgC4-Jb7yRIDBXCKUB7L9yQjoyAUswNkwTtC98thzAXkW17W5_cYJkHWf8m4tK1ZAXArozvADuqpqVtt11dZ1WT_UD-uygBN0m2b1oWzqtm6rZlvV1fZSwE9ro-h6tW3bddU0ZVVuNuWmbBa1L0sxhbr8ArCL5F4?type=png" /></a></p>
 <!-- more -->
 
-<p>原理：</p>
-<p>向 <code>/proc/sys/vm/drop_caches</code>文件中写入数值可以使内核释放page cache，dentries和inodes缓存所占的内存。</p>
-<p>只释放pagecache：
-    echo 1 &gt; /proc/sys/vm/drop_caches
-只释放dentries和inodes缓存：
-    echo 2 &gt; /proc/sys/vm/drop_caches
-释放pagecache、dentries和inodes缓存：
-    echo 3 &gt; /proc/sys/vm/drop_caches
-这个操作不是破坏性操作，脏的对象（比如脏页）不会被释放，因此要首先运行sync命令。</p>
-<h2 id="_2">二、定时任务的参数及设置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>设置：</p>
-<p>使用<code>crontab -e</code>以当前用户的身份创建一个定时任务，该定时任务只对当前用户有效。
-    crontab -e
-写入：
-    04 00 * * * /mnt/freememory.sh
-前面的参数是minute hour day month dayofweek，后面接脚本位置，意思是每日4时执行mnt目录下的<code>freememory.sh</code>脚本</p>
-<p>参数：
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>crontab [-u user] file
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>crontab [-u user]{-l|-r|-e}
+<h2 id="_3">快速开始<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">services</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="nt">transmail-station</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/qqays/transmail-station:latest</span><span class="w">  </span><span class="c1"># 使用 github packages 镜像</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1">#    image: qqays/transmail-station:latest  # 使用 dockerhub 镜像</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transmail-station</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1">#    environment:</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">#      - TZ=Asia/Shanghai</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nt">logging</span><span class="p">:</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;json-file&quot;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="nt">max-size</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1g&quot;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./config.yml:/usr/src/transmail-station/config/config.yml</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./logs:/usr/src/transmail-station/logs</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8100:8100&quot;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;curl&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;-f&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;http://localhost:8100/health&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30s</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">      </span><span class="nt">start_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on-failure</span>
 </span></code></pre></div></td></tr></table></div>
-<code>-u user</code>：用来设定某个用户的crontab服务，例如，“-u ixdba”表示设定ixdba用户的crontab服务，此参数一般有root用户来运行。</p>
-<p><code>file</code>：file是命令文件的名字,表示将file做为crontab的任务列表文件并载入crontab。如果在命令行中没有指定这个文件，crontab命令将接受标准输入（键盘）上键入的命令，并将它们载入crontab。</p>
-<p><code>-e</code>：编辑某个用户的crontab文件内容。如果不指定用户，则表示编辑当前用户的crontab文件。</p>
-<p><code>-l</code>：显示某个用户的crontab文件内容，如果不指定用户，则表示显示当前用户的crontab文件内容。</p>
-<p><code>-r</code>：从/var/spool/cron目录中删除某个用户的crontab文件，如果不指定用户，则默认删除当前用户的crontab文件。</p>
-<p><code>-i</code>：在删除用户的crontab文件时给确认提示。</p>
-<p>至此，CentOS中定时释放内存的Shell脚本就完成了。</p>
+<h3 id="1">1. 创建文件夹<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>TransMail-Station/config<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>TransMail-Station
+</span></code></pre></div></td></tr></table></div>
+<h3 id="2-docker-composeyml">2. 拉取配置与 <code>docker-compose.yml</code><a class="headerlink" href="#2-docker-composeyml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>wget<span class="w"> </span>-O<span class="w"> </span>./config.yml<span class="w"> </span>https://raw.githubusercontent.com/qqAys/TransMail-Station/refs/heads/main/config/config.example.yml
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>wget<span class="w"> </span>-O<span class="w"> </span>./docker-compose.yml<span class="w"> </span>https://raw.githubusercontent.com/qqAys/TransMail-Station/refs/heads/main/docker-compose.yml
+</span></code></pre></div></td></tr></table></div>
+<h3 id="3">3. 编辑配置<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>vim<span class="w"> </span>./config.yml
+</span></code></pre></div></td></tr></table></div>
+<p>配置说明详见 <a href="https://github.com/qqAys/TransMail-Station/blob/main/config/config.example.yml">config.example.yml</a></p>
+<h3 id="4">4. 启动容器<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</span></code></pre></div></td></tr></table></div>
+<h3 id="5-api">5. 使用API<a class="headerlink" href="#5-api" title="Permanent link">&para;</a></h3>
+<p>访问 <a href="http://localhost:8100/docs">TransMail-Station - Swagger UI</a>，查看API文档并集成到业务代码中。</p>
+<h2 id="_4">本地构建<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">1. 克隆项目，修改配置<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># 克隆项目</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/qqAys/TransMail-Station.git
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nb">cd</span><span class="w"> </span>TransMail-Station
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="c1"># 修改配置</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>mv<span class="w"> </span>./config/config.example.yml<span class="w"> </span>./config/config.yml
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>vim<span class="w"> </span>./config/config.yml
+</span></code></pre></div></td></tr></table></div>
+<p>配置说明详见 <a href="https://github.com/qqAys/TransMail-Station/blob/main/config/config.example.yml">config.example.yml</a></p>
+<h3 id="2-docker-composebuildyml">2. 使用 <code>docker-compose.build.yml</code> 构建并启动容器<a class="headerlink" href="#2-docker-composebuildyml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_5">许可<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>本项目采用 MIT 许可协议进行许可。</p>
 
 
 
@@ -1097,7 +1260,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../installation-of-site-ssl-certificate.html/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 站点SSL证书的安装">
+          <a href="../Data-Pipeline-Tools-mysql-dataflowsync%28DFS%29.html/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 数据管道工具 - mysql-dataflowsync（DFS）">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1107,27 +1270,11 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                站点SSL证书的安装
+                数据管道工具 - mysql-dataflowsync（DFS）
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../typecho-displays-article-titles.html/" class="md-footer__link md-footer__link--next" aria-label="下一页: Typecho显示受密码保护的文章标题">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                Typecho显示受密码保护的文章标题
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
